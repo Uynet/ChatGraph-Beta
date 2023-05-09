@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "PWqiybbi",
+      "type": "OutputNode",
+      "sockets": [
+        {
+          "type": "input",
+          "propName": "inputed",
+          "name": "",
+          "nodeId": "PWqiybbi",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": 0.0 },
+        { "name": "positionY", "value": 0.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 73.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/OutputNode.png"
+        },
+        { "name": "label", "value": "output" },
+        { "name": "isSendChat", "value": false },
+        { "name": "inputed", "value": "" }
+      ],
+      "slots": [{ "propName": "inputed", "type": "chat", "ioType": "input" }]
+    }
+  ],
+  "edges": []
+}

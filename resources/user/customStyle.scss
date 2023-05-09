@@ -1,0 +1,93 @@
+.mainWindow {
+  background: #191721; 
+  border: none;
+  font-size: 13px;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.windowMenu::item {
+  color: #ccc;
+}
+.windowMenu::item:selected {
+  background: #333344;
+}
+
+.panelArea { 
+  border:2px solid rgba(0,0,0,0);
+}
+.panelArea::pane { 
+  border-radius: 4px;
+  border-right:2px solid #555;
+  background:#18171b;
+}
+
+.panelTab {
+  border:none;
+  color: #ccc;
+}
+.panelTab::tab {
+  background: #333344;
+  width: 70px;
+  height: 25px;
+  font-size: 14px;
+  padding: 5px;
+}
+.panelTab::tab:selected {
+  border-radius: 8px;
+  background: #18171b;
+}
+/*  =============  */
+
+.QMenu{
+  border:solid 2px #ccc
+}
+.QMenu::item {
+  background:#888899;
+  font-weight: bold;
+  font-size:13px;
+  color: #333344;
+  padding:7px;
+  border:solid 2px #ccc
+}
+.QMenu::item:selected {
+  background:#333344;
+  color: #ccc;
+  border:solid 2px #ccc
+}
+.QMenuBar {
+  font-size: 15px;
+  padding: 5px;
+  color: #ccc;
+  background-color: #191721;
+  border-bottom: 1px solid #666688;
+}
+
+.QMenuBar::item:selected {
+  background: #333344;
+}
+.QSplitter {
+  width: 6px;
+  background: #333344;
+}
+.QSplitter::handle {
+  width: 6px;
+  background: #333344;
+}
+
+
+
+
+.nextButton {
+  background-color: #aaa;
+  color: #191721;
+  font-size: 14px;
+  border-radius: 8px;
+  width: 50px;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  letter-spacing: 1.2;
+  padding: 4px;
+  margin: 5px;
+}

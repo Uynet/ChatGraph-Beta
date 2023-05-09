@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "id": "RatOzLEk",
+      "type": "GPTNode",
+      "sockets": [
+        {
+          "type": "input",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "RatOzLEk",
+          "socketId": 0
+        },
+        {
+          "type": "input",
+          "propertyType": "ROLE",
+          "name": "",
+          "nodeId": "RatOzLEk",
+          "socketId": 1
+        },
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "RatOzLEk",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": -147.0 },
+        { "name": "positionY", "value": -269.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 400.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/GPTNode.png"
+        },
+        { "name": "label", "value": "Chat AI" },
+        { "name": "isSendChat", "value": true },
+        { "name": "isMemorable", "value": true },
+        {
+          "name": "systemPrompt",
+          "value": "\u306a\u305e\u306a\u305e\u3092\u3060\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n\u7b54\u3048\u306f\u4f0f\u305b\u3066\u306d\u3002"
+        },
+        { "name": "history", "value": [] },
+        { "name": "inputed", "value": "" },
+        { "name": "output", "value": "" },
+        {
+          "name": "script",
+          "value": "def onInput(self, input):\n    from api.apis import chatGPTReq\n    from utils.util import Util\n    systemPrompt = self.get(\"systemPrompt\") \n    history = self.get(\"history\") \n    messages = Util.genMessages(input,systemPrompt,history)\n    try:\n        answer = \"\"\n        for talk in chatGPTReq(messages,stream=True):\n            answer += talk\n            self.stream(answer , isOutput=False)\n        # onfinish\n        print(answer)\n    except Exception as e:\n        answer = str(e)\n        raise(e)\n\n\n\nonInput(node , node.input)"
+        }
+      ]
+    },
+    {
+      "id": "Xd7KnGMU",
+      "type": "TextInputNode",
+      "sockets": [
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "Xd7KnGMU",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": -417.0 },
+        { "name": "positionY", "value": -144.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 200.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/TextInputNode.png"
+        },
+        { "name": "label", "value": "input" },
+        { "name": "isSendChat", "value": true },
+        { "name": "inputed", "value": "" },
+        {
+          "name": "output",
+          "value": "\u304a\u984c\uff1a\u3084\u3070\u3059\u304e\u308b\u52d5\u7269"
+        }
+      ]
+    },
+    {
+      "id": "PwFMsuxf",
+      "type": "GPTNode",
+      "sockets": [
+        {
+          "type": "input",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "PwFMsuxf",
+          "socketId": 0
+        },
+        {
+          "type": "input",
+          "propertyType": "ROLE",
+          "name": "",
+          "nodeId": "PwFMsuxf",
+          "socketId": 1
+        },
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "PwFMsuxf",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": 121.0 },
+        { "name": "positionY", "value": -275.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 400.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/GPTNode.png"
+        },
+        { "name": "label", "value": "Chat AI" },
+        { "name": "isSendChat", "value": true },
+        { "name": "isMemorable", "value": false },
+        {
+          "name": "systemPrompt",
+          "value": "\u306a\u305e\u306a\u305e\u306b\u56de\u7b54\u3057\u3066"
+        },
+        { "name": "history", "value": [] },
+        { "name": "inputed", "value": "" },
+        { "name": "output", "value": "" },
+        {
+          "name": "script",
+          "value": "def onInput(self, input):\n    from api.apis import chatGPTReq\n    from utils.util import Util\n    systemPrompt = self.get(\"systemPrompt\") \n    history = self.get(\"history\") \n    messages = Util.genMessages(input,systemPrompt,history)\n    try:\n        answer = \"\"\n        for talk in chatGPTReq(messages,stream=True):\n            answer += talk\n            self.stream(answer , isOutput=False)\n        # onfinish\n        print(answer)\n    except Exception as e:\n        answer = str(e)\n        raise(e)\n\n\n\nonInput(node , node.input)"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "output": {
+        "type": "output",
+        "propertyType": "CHAT",
+        "name": "",
+        "nodeId": "RatOzLEk",
+        "socketId": 0
+      },
+      "input": {
+        "type": "input",
+        "propertyType": "CHAT",
+        "name": "",
+        "nodeId": "PwFMsuxf",
+        "socketId": 0
+      }
+    },
+    {
+      "output": {
+        "type": "output",
+        "propertyType": "CHAT",
+        "name": "",
+        "nodeId": "Xd7KnGMU",
+        "socketId": 0
+      },
+      "input": {
+        "type": "input",
+        "propertyType": "CHAT",
+        "name": "",
+        "nodeId": "RatOzLEk",
+        "socketId": 0
+      }
+    }
+  ]
+}

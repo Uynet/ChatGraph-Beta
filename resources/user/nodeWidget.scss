@@ -1,0 +1,95 @@
+/* ------------------ Node Window ---------------- */
+.nodeWidget {
+  background-color: #202022;
+  border-radius: 5px;
+  color: #ccc;
+  border: solid 1px #333;
+  margin: 0;
+}
+
+.nodeSplitter {
+  border: 1px solid #333333;
+  margin: 0;
+}
+.nodeSplitter::handle {
+  border: 1px solid #333;
+  width: 1px;
+}
+
+.propertyLabelStatic{
+  font-size: 14px;
+  font-weight: regular;
+  font-family: Yu Gothic UI;
+  letter-spacing: 1.2px;
+  color: #999;
+  margin: 0;
+}
+
+.propertyLabelActive {
+  font-size: 14px;
+  font-weight: bold;
+  color: #D3E46B;
+  font-family: Yu Gothic UI;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.nodePropertyArea {
+  border: none;
+  margin: 0;
+}
+
+.nodeTextFieldOutput {
+  margin: 0;
+  color: #ccc;
+  background-color: #0f0f0f;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 2px;
+  font-family: Yu Gothic UI;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.nodeTextFieldOutput:vertical {
+    border: none;
+    background: transparent;
+    width: 8px;
+    margin: 0 
+}
+
+.nodeTextFieldOutput::handle:vertical {
+    background: #ccc;
+    border: none;
+    min-height: 30px;
+    border-radius: 7px;
+    margin: 0 
+}
+
+.nodeTextFieldOutput::add-line:vertical, .nodeTextFieldOutput::sub-line:vertical {
+    border: none;
+    height: 0px;
+    margin: 0 
+}
+
+.nodeTextFieldOutput::add-page:vertical, .nodeTextFieldOutput::sub-page:vertical {
+    border: none;
+    background: none;
+    margin: 0 
+}
+
+
+.bottomWidget {
+  background-color: #333344;
+  margin: 0;
+}
+
+
+#buttonWidget{
+  color: #999;
+  padding: 5px;
+  margin: 0px;
+  border: solid 3px red;
+}
+#buttonWidget:hover{
+  color:red;
+}

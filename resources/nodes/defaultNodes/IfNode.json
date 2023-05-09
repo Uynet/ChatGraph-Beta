@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": "M20YSmax",
+      "type": "IfNode",
+      "sockets": [
+        {
+          "type": "input",
+          "propertyType": "CHAT",
+          "name": "",
+          "nodeId": "M20YSmax",
+          "socketId": 0
+        },
+        {
+          "type": "input",
+          "propertyType": "FLAG",
+          "name": "",
+          "nodeId": "M20YSmax",
+          "socketId": 1
+        },
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "False",
+          "nodeId": "M20YSmax",
+          "socketId": 0
+        },
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "True",
+          "nodeId": "M20YSmax",
+          "socketId": 1
+        },
+        {
+          "type": "output",
+          "propertyType": "CHAT",
+          "name": "Other",
+          "nodeId": "M20YSmax",
+          "socketId": 2
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": -50.0 },
+        { "name": "positionY", "value": -23.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 300.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/SwitchNode.png"
+        },
+        { "name": "label", "value": "Switch" },
+        { "name": "isSendChat", "value": false },
+        { "name": "flag", "value": "True" },
+        { "name": "inputed", "value": "" },
+        { "name": "output", "value": "" },
+        {
+          "name": "script",
+          "value": "data = node.input\nflag = node.get(\"flag\")\nif not flag in { \"True\" , \"False\" }:\n    flag = \"Other\"\nnode.stream(data , isOutput=True , socket=flag)"
+        }
+      ]
+    }
+  ],
+  "edges": []
+}

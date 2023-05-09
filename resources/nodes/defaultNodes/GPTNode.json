@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "DZ9vcaFg",
+      "type": "GPTNode",
+      "sockets": [
+        {
+          "type": "input",
+          "propName": "inputed",
+          "name": "",
+          "nodeId": "DZ9vcaFg",
+          "socketId": 0
+        },
+        {
+          "type": "input",
+          "propName": "template",
+          "name": "",
+          "nodeId": "DZ9vcaFg",
+          "socketId": 1
+        },
+        {
+          "type": "input",
+          "propName": "systemPrompt",
+          "name": "",
+          "nodeId": "DZ9vcaFg",
+          "socketId": 2
+        },
+        {
+          "type": "output",
+          "propName": "output",
+          "name": "",
+          "nodeId": "DZ9vcaFg",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": -172.0 },
+        { "name": "positionY", "value": -201.0 },
+        { "name": "width", "value": 298.0 },
+        { "name": "height", "value": 304.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/GPTNode.png"
+        },
+        { "name": "label", "value": "Chat AI" },
+        { "name": "isSendChat", "value": true },
+        { "name": "isMemorable", "value": true },
+        { "name": "systemPrompt", "value": "" },
+        { "name": "history", "value": [] },
+        { "name": "inputed", "value": "" },
+        { "name": "output", "value": "" },
+        { "name": "template", "value": "{input}\u3068\u7b54\u3048\u3066" },
+        {
+          "name": "script",
+          "value": "def onInput(self, input):\n    from api.apis import chatGPTReq\n    from utils.util import Util\n    systemPrompt = self.get(\"systemPrompt\")\n    systemPrompt = systemPrompt.replace(\"{inputed}\",node.input) \n    history = self.get(\"history\") \n    messages = Util.genMessages(input,systemPrompt,history)\n    try:\n        answer = \"\"\n        for talk in chatGPTReq(messages,stream=True):\n            answer += talk\n            self.stream(answer , isOutput=False)\n        # onfinish\n        print(answer)\n    except Exception as e:\n        answer = str(e)\n        raise(e)\n\nonInput(node , node.input)"
+        }
+      ],
+      "slots": [
+        { "propName": "template", "type": "set", "ioType": "input" },
+        { "propName": "systemPrompt", "type": "set", "ioType": "input" },
+        { "propName": "inputed", "type": "chat", "ioType": "input" },
+        { "propName": "output", "type": "chat", "ioType": "output" }
+      ]
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,20 @@
+.vscode/
+.env
+error_log.txt
+*.ini
+dist/
+ChatGraph-Beta/
+config.ini
+# node_modules
+node_modules/
+
+w2v/
+
+#cache
+__pycache__/
+__init__.py
+*.pyc
+# *.spec
+
+build/*
+../build/*

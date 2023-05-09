@@ -1,0 +1,59 @@
+.inspectorContainer{
+    color:#ccc;
+}
+.inspectorPropertyList {
+  background-color: #0f0f0f;
+  color:#555;
+}
+.checkBox{
+  color:#555;
+}
+.checkBox::indicator{
+  width:20px;
+  height:20px;
+  background-color: #0f0f0f;
+  color:#555;
+}
+.checkBox::indicator:checked{
+  background-color: #555;
+}
+
+.inspectorProperty {
+  border-radius: 4px;
+    color:#999;
+    background-color: #0f0f0f;
+    border:solid 1px #222;
+    font-size: 14px;
+    line-height: 1.5px;
+    letter-spacing: 1.6px;
+    font-family: Yu Gothic UI;
+    font-weight: bold ;
+    padding: 10px;
+}
+
+.inspectorScrollArea {
+  background-color: #202020;
+  border-radius: 5px;
+  margin: 0px;
+  border:1px solid #555;
+}
+
+
+.inspectorWindow {
+  background-color: #202022;
+  border-radius: 1px;
+  border: 1px solid #555;
+  margin: 0px;
+}
+
+
+.inspectingItemWidget {
+  color: #999;
+  border: 1px #555 solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.inspectingItemLabel{
+  color: #999;
+}

@@ -1,0 +1,21 @@
+.fileItem{
+    background:blue;
+    max-height:50px;
+}
+QListWidget {
+   background-color: white;
+   color:red;
+}
+QListWidget::item {
+    padding: 5px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    color: black;
+}
+QListWidget::item:selected {
+    background-color: #87bdd8;
+    color: white;
+}
+QListWidget::item:hover {
+    background-color: #cfe2f3;
+}

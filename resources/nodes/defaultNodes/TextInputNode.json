@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "O8QDgqXG",
+      "type": "TextInputNode",
+      "sockets": [
+        {
+          "type": "output",
+          "propName": "output",
+          "name": "",
+          "nodeId": "O8QDgqXG",
+          "socketId": 0
+        }
+      ],
+      "properties": [
+        { "name": "positionX", "value": -222.0 },
+        { "name": "positionY", "value": -146.0 },
+        { "name": "width", "value": 200.0 },
+        { "name": "height", "value": 200.0 },
+        {
+          "name": "icon",
+          "value": "./resources/images/chatIcons/defaults/TextInputNode.png"
+        },
+        { "name": "label", "value": "input" },
+        { "name": "isSendChat", "value": true },
+        { "name": "inputed", "value": "" },
+        { "name": "output", "value": null }
+      ],
+      "slots": [{ "propName": "output", "type": "chat", "ioType": "output" }]
+    }
+  ],
+  "edges": []
+}

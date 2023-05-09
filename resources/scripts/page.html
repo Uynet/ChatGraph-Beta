@@ -1,0 +1,45 @@
+以下はHTMLで書かれた簡単な図形です。このコードをコピーして、ブラウザで開いてみてください！
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML図形</title>
+	<style>
+		.square {
+			height: 100px;
+			width: 100px;
+			background-color: red;
+		}
+		.circle {
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			border-radius: 50%;
+		}
+		.triangle {
+			height: 0;
+			width: 0;
+			border-top: 100px solid yellow;
+			border-right: 100px solid transparent;
+		}
+	</style>
+</head>
+<body>
+
+<div class="square"></div>
+
+<div class="circle"></div>
+
+<div class="triangle"></div>
+
+</body>
+</html>
+```
+
+このコードでは、3つの要素を作成しています。
+1. 四角形: `.square`というクラスを付けた `div` 要素で作成。
+2. 円形: `.circle`というクラスを付けた `div` 要素で作成。`border-radius`プロパティで円形になるように調整。
+3. 三角形: `.triangle`というクラスを付けた `div` 要素で作成。`border`プロパティを使用して、三角形を含む四角形を作成。
+
+これらの図形をさまざまな方法でカスタマイズすることができます。また、`svg`要素を使用して、より複雑な図形を描画することもできます。

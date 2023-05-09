@@ -1,0 +1,114 @@
+.chatScrollArea:vertical {
+    border: none;
+    background: transparent;
+    width: 8px;
+    margin: 0 
+}
+
+.chatScrollArea::handle:vertical {
+    background: #999;
+    border: none;
+    min-height: 30px;
+    border-radius: 7px;
+    margin: 0 
+}
+
+.chatScrollArea::add-line:vertical, .chatScrollArea::sub-line:vertical {
+    border: none;
+    height: 0px;
+    margin: 0 
+}
+
+.chatScrollArea::add-page:vertical, .chatScrollArea::sub-page:vertical {
+    border: none;
+    background: none;
+    margin: 0 
+}
+
+.chatWindow {
+  background-color: #202022;
+  border-radius: 1px;
+  border: 1px solid #555;
+  margin: 0px;
+}
+
+.chatLineWidget {
+  background-color: #1d1d24;
+  color: #999;
+  border:1px solid #555;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.iconLabel {
+  border: 10%;
+  margin: 0px;
+  background-color: none;
+  padding: 0px;
+  width: 44px;
+}
+
+.chatContainer {
+  margin: 0px;
+  border: none;
+}
+
+.logDeleteButton {
+  background-color: #aa3333;
+  background-color: #0f0f0f;
+  border: solid 1px #ccc;
+  color: #999;
+  font-size: 14px;
+  width: 50px;
+  font-family: Yu Gothic UI;
+  letter-spacing: 1.1px;
+  padding: 4px;
+  margin: 5px;
+}
+
+.tokenCountLabel {
+  color: #555;
+  background:none;
+  padding: 2px;
+  font-family: Yu Gothic UI;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  border:none;
+}
+
+.chatSendFormWidget {
+  border-radius: 3px;
+  background-color: #000;
+  border:1px solid #222;
+  padding: 8px;
+  color: #ccc;
+  margin: 0px;
+}
+
+.chatSendButton {
+  border-radius: 3px;
+  color: #ccc;
+  padding: 8px;
+  background-color: #000;
+  border:1px solid #222;
+}
+
+.messageLabel {
+  white-space: pre-wrap;
+  background-color: #1d1d24;
+  color: #ccc;
+  font-size: 15px;
+  letter-spacing: 1.7px;
+  line-height: 1.7px;
+  font-family: "Yu Gothic UI";
+}
+
+.nameLabel {
+  color: #eaeaea;
+  background-color: #0f0f0f;
+  border: none;
+  font-family: "Yu Gothic UI";
+  letter-spacing: 1.3px;
+  padding-left: 8px;
+}
+
