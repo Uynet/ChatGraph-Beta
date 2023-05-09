@@ -8,16 +8,16 @@ Exec ノードでは python コードを実行することができます。Chat
 - [execNode](../src/editors/models/nodes/execNode.py)
 
 ## 基本仕様
-
-print 文による標準出力がノード終了時に出力されます。
+print 文による標準出力がノード終了時にDefaultソケットから出力されます。
+エラー出力の場合Errorソケットからの出力になります。
 
 ## node
 
-ローカル変数`node`によって自身の参照が渡されます。
+ローカル変数[node](https://github.com/Uynet/ChatGraph-Beta/blob/1eebafe0d0abd59fc2b9ebe41796c7126e23cdcf/src/debug/debugCommand.py#L23)によって自身の参照が渡されます。
 
 ### node.input
 
-inputed への入力値を取得できます。
+inputed への入力値を取得できます。これは実質的にnode.get("inputed")に等しいです。
 
 ### node.get
 
@@ -27,14 +27,13 @@ inputed への入力値を取得できます。
 name = node.get("label")
 ```
 
-### node.set(name:str , value:str)
+### node.set
 
 - node.set("label","ノードの名前")
 - node.set("icon","../images/customIcon.png")
 
 存在しない property をセットしようとすると、**新たに追加されます。**
-
-- [props](../src/editors/dataType.py)
+- [props](https://github.com/Uynet/ChatGraph-Beta/blob/1eebafe0d0abd59fc2b9ebe41796c7126e23cdcf/src/editors/types/dataType.py#L99)
 
 ### node.stream
 
