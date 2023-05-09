@@ -1,5 +1,3 @@
-This project is licensed under the terms of the GNU General Public License v3.0. PyQt is also used in this project, which is licensed under the GPL.
-
 # ⚡ChatGraph
 ChatAIのノードエディタ
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -7,7 +5,7 @@ ChatAIのノードエディタ
 ![image](https://github.com/Uynet/ChatGraph-Beta/assets/18478402/c58d40cd-18e2-46e3-aa14-73cb14d0563c)
 
 ## Index
-
+- [開発者情報](https://twitter.com/NoContextAl)
 - [Exec ノードのスクリプト仕様](readme/spec.md)
 
 ## Release
@@ -31,3 +29,6 @@ ChatAIのノードエディタ
 ## Build
 
 (buid.bat)
+
+## Licence
+This project is licensed under the terms of the GNU General Public License v3.0. PyQt is also used in this project, which is licensed under the GPL.
